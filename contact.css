@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+
+*{
+/*establece como se calcula el ancho y alto total de un elemento*/
+    box-sizing: border-box;  
+}
+
+html{
+    
+}
+
+
+
+   /*Estilos Generales*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 80px 0px 80px;
+   
+}
+
+
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em; }      /*Tamaño de la fuente*/
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.2em;}
+
+
+        /* Encabezado */
+
+        header{
+            background-color: white;
+         
+            top: 0px;
+            height: 60px;
+           padding-right: 200px;
+           padding-left: 115px;
+           z-index: 1;
+          
+        }
+        
+        
+        header .logo{
+            margin: 0;
+            padding: 25px 30px 30px 80px;
+            font-weight: bold;
+            color:  rgb(56, 85, 2);
+            font-size: 1.5em;
+        
+        }
+        
+        .logo img {
+            width: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+           
+        }
+        
+        header .contenedor{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        
+         
+        }
+        
+        header nav{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 25px;
+           
+            
+        
+        }
+        
+        header a{
+            color: black;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+        
+        header a:hover{
+            background-color: rgb(56, 85, 2);
+            color: #fff;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+        
+        
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        
+        
+        footer {
+            background-color: rgb(230,230,230);
+            border-radius: 50px;
+          
+        }
+        
+        footer p{
+            margin: 0;
+            display: flex;
+            padding: 6px;
+            color: rgb(100,100,100);
+           
+          
+        }
+        
+        
+        
+@media(min-width: 1140px){
+    header{
+        
+        width: 100%;
+    }
+
+    header .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+   }
+
+
+   
+@media( max-width: 1180px){
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    header b{
+        font-size: 20px;
+    }
+
+    .logo{
+        transform: translateY(-28%);
+        
+    }
+
+    .logo img{
+        transform: translateY(28%);
+    }
+
+ 
+
+}
+
+
+
+@media (max-width: 819px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajusta según el alto del encabezado */
+        left: 0;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    header nav a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header{
+        position: relative;
+        right: 20px;
+        
+
+    }
+
+    .logo{
+        height: 10px;
+        position: relative;
+        transform: translateY(-70%);
+    }
+
+    .logo img{
+        transform: translateY(50%);
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+
+
+
+    
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.main p {
+    margin-top: 1rem;
+    font-size: 30px;
+    text-align: justify;
+}
+
+
+
+.social a:hover {
+    color: #fff;
+    background-color: #244D61;
+    transition: all .3s ease-in-out;
+}
+
+.main h1 span:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.main h3 {
+    font-size: 1.5rem;
+}
+
+.images::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 130px);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, #1e2024, rgb(56, 85, 2));
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+.images::before {
+    background: linear-gradient(145deg, #101010, #121111);
+    box-shadow: 10px 10px 20px rgb(56, 85, 2), -5px -5px 15px rgb(56, 85, 2);
+}
+
+.images {
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+    z-index: -1;
+    position: relative;
+    transform: translateY(-30%);
+}
+
+
+
+   
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 4.4rem;
+    }
+}
+
+
+/* botones Redes Sociales */
+
+.social {
+    display: flex;
+    list-style: none;
+  }
+  
+  .social .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    right: 120px;
+    top: 360px;
+  
+  }
+  .social a{
+      border: none;
+  }
+
+  .social a:hover {
+    color: #fff;
+    background-color: #244D61;
+    transition: all .3s ease-in-out;
+}
+
+  
+  .social .facebook:hover{
+    background: rgb(56, 85, 2);
+    color: #ffffff;
+  }
+  
+  .social .twitter:hover{
+    background: rgb(56, 85, 2);
+    color: #ffffff;
+  }
+  
+  .social .instagram:hover {
+    background: rgb(56, 85, 2);
+    color: #ffffff;
+  }
+  
+  .social .youtube:hover{
+    background: rgb(56, 85, 2);
+    color: #ffffff;
+  }
+  
+
+  
+  footer {
+      background-color: rgb(230,230,230);
+      border-radius: 50px;
+    
+  }
+  
+  footer p{
+      margin: 0;
+      display: flex;
+      padding: 6px;
+      color: rgb(100,100,100);
+     
+    
+  }
+  
+  footer .contenedor{
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+  
+  
+  @media( max-width: 1180px){
+
+    .main p {
+        margin-top: 1rem;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .images {
+        width: 100%;
+        margin-left: auto;
+        position: relative;
+        z-index: -1;
+        position: relative;
+        transform: translateY(-60%);
+    }
+  
+    .social .icon {
+        top: 120px;
+    }
+    
+
+  }
+
+  @media (max-width: 819px) {
+
+
+  main p {
+    margin-top: 1rem;
+    font-size: 5px;
+    text-align: justify;
+
+  }
+
+.images {
+    width: 300px;
+    height: 350px;
+    margin-left: auto;
+    position: relative;
+    z-index: -1;
+    border-radius: 55px;
+    position: relative;
+    transform: translateY(-60%);
+    
+}
+
+.social .icon {
+    top: 30px;
+}
+
+.images::before {
+    display: none;
+}
+}
